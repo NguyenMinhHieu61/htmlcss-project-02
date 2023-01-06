@@ -17,23 +17,32 @@ body {
     margin-right: auto;
 }
 .btn {
-    padding: 11px 41px;
+    display: inline-block;
+    min-width: 118px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #FFFFFF;
     background: #171100;
     border-radius: 24.5px;
+    padding: 11px 41px;
+}
+a {
     text-decoration: none;
 }
-
 /*============= Header ============= */
 .header {
     background: #FFFCF4;
     padding-top: 36px;
 }
-.fixed {
-
+.header.fixed {
+    position: sticky;
+    top: -28px;
 }
 .header .body {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 8px;
 }
 .header .logo {
     width: 85px;
@@ -55,11 +64,9 @@ body {
 
 }
 .header .nav a {
+    position: relative;
     font-size: 1.6rem;
-    line-height: 1.75;
-    text-align: center;
     color: #5F5B53;
-    text-decoration: none;
 }
 .header .btn {
     margin-left: 70px;
@@ -67,4 +74,21 @@ body {
     line-height: 1.75;
     text-align: center;
     color: #FFFFFF;
+}
+.nav a:hover,
+.nav li.active a {
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+.nav li.active a::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    bottom: -6px;
+    left: 1px;
+    background: #171100;
+    border-radius: 1px;
 }
