@@ -24,7 +24,7 @@ body {
     text-align: center;
     color: #FFFFFF;
     background: #171100;
-    border-radius: 24.5px;
+    border-radius: 999px;
     padding: 11px 41px;
 }
 a {
@@ -38,6 +38,7 @@ a {
 .header.fixed {
     position: sticky;
     top: -28px;
+    z-index: 1;
 }
 .header .body {
     display: flex;
@@ -90,16 +91,70 @@ a {
 }
 /*============= Hero ============= */
 .hero-wrap {
+    padding: 56px 0 64px;
     background: #FFFCF4;
 }
 .hero {
     display: flex;
     justify-content: space-between;
-    padding-top: 56px;
+}
+.hero .media {
+    position: relative;
+    width: 48%;
 }
 .hero .image img {
+    display: block;
     width: 470px;
+    height: 685px;
+    object-fit: cover;
     border-radius: 20px;
+}
+.hero-summary {
+    position: absolute;
+    right: 0;
+    bottom: 48px;
+    width: 270px;   
+    padding: 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+.hero-summary .item {
+    display: flex;
+    align-items: center;
+}
+.hero-summary .item + .item {
+    margin-top: 18px;
+}
+.hero-summary .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+.hero-summary .icon-ux {
+    background: #FFF9E8;
+}
+.hero-summary .icon-development {
+    background: #FCEFFF;
+}
+.hero-summary .icon-marketing {
+    background: #EBEAFF;
+}
+
+.hero-summary .label {
+    font-size: 1.4rem;
+    line-height: 1.85;
+    color: #5F5B53;
+}
+.hero-summary .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
 }
 .hero .info {
     max-width: 470px;
@@ -168,4 +223,107 @@ a {
     line-height: 1.6;
     color: #5F5B53;
     margin-left: 12px;
+}
+
+/*============= Courses ============= */
+.courses-wrap {
+    margin: 200px 0;
+}
+.courses-heading {
+    display: flex;
+    justify-content: space-between;
+}
+.courses-heading .sub-title {
+    font-family: 'Sen', sans-serif;
+    font-size: 3.8rem;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+.courses-heading .desc {
+    max-width: 458px;
+    margin-top: 16px;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5F5B53;
+}
+.courses-heading .btn-courses {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border: 1px solid #FFB900;
+    border-radius: 50%;
+    background: transparent;
+    color: #FFB900;
+    cursor: pointer;
+}
+.courses-heading .btn-courses:hover {
+    background: #FFB900;
+    color: #FFFFFF;
+}
+.courses-heading .btn-courses.btn-left {
+    margin-left: auto;
+    margin-right: 18px;
+}
+.courses-body {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+.courses-body .card {
+    background: #FFFFFF;
+    border: 1px solid #E2DFDA;
+    border-radius: 12px;
+}
+.courses-body .card:hover {
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+    border: none;
+}
+.courses-body .card .image img{
+    width: 370px;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+.courses-body .card .info {
+    margin: 16px 22px 22px;
+}
+.courses-body .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.courses-body .sub-title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+.courses-body .rate span {
+    color: #FFB900;
+}
+.courses-body .desc {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 1.85;
+    color: #5F5B53;
+}
+.courses-body .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.courses-body .bottom .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+.courses-body .courses-book-now {
+    font-size: 1.4rem;  
+    padding: 18px 24px;
+}
+.courses-body .courses-book-now:hover {
+    background: #FFB900;
+    color: #FFFFFF;
 }
