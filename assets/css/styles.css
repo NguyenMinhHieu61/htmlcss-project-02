@@ -30,6 +30,15 @@ body {
 a {
     text-decoration: none;
 }
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
 /*============= Header ============= */
 .header {
     background: #FFFCF4;
@@ -232,6 +241,7 @@ a {
 .courses-heading {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .courses-heading .sub-title {
     font-family: 'Sen', sans-serif;
@@ -270,16 +280,17 @@ a {
     gap: 30px;
 }
 .courses-body .card {
+    flex: 1;
     background: #FFFFFF;
     border: 1px solid #E2DFDA;
     border-radius: 12px;
 }
 .courses-body .card:hover {
     box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
-    border: none;
+    border-color: transparent;
 }
 .courses-body .card .image img{
-    width: 370px;
+    width: 100%;
     height: 278px;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
@@ -296,7 +307,13 @@ a {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
+}
+.courses-body .sub-title a {
     color: #171100;
+
+}
+.courses-body .rate {
+    padding-left: 48px;
 }
 .courses-body .rate span {
     color: #FFB900;
