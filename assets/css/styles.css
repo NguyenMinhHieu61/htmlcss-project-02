@@ -344,3 +344,77 @@ a {
     background: #FFB900;
     color: #FFFFFF;
 }
+
+/*============= Feedback ============= */
+.feedback {
+    background: #2E2100;
+    padding: 96px 0;
+}
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+.feedback-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-shrink: 0;
+}
+.feedback .avt {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.feedback .name {
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    color: #F7F7F7;
+    margin-top: 18px;
+}
+.feedback .career {
+    font-size: 1.4rem;
+    line-height: 1.85;
+    color: #BFBCB3;
+    margin-top: 4px;
+}
+.feedback .dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 28px;
+}
+.feedback .dots .dot {
+    width: 6px;
+    height: 6px;
+    background: #634700;
+    border-radius: 50%;
+}
+.feedback .dots .dot:hover {
+    background: #FFB900;
+    cursor: pointer;
+}
+.feedback .dot.active {
+    background: #FFB900;
+}
+.feedback .review {
+    position: relative;
+    margin-left: auto;
+    width: 63.77%;
+}
+.review img {
+    position: absolute;
+    top: -28px;
+    left: -30px;
+}
+.feedback .text {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 1.54;
+
+    color: #FFFFFF;
+}
+
