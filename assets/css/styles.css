@@ -407,7 +407,7 @@ a {
 }
 .review img {
     position: absolute;
-    top: -28px;
+    top: 10px;
     left: -30px;
 }
 .feedback .text {
@@ -415,7 +415,7 @@ a {
     font-weight: 400;
     font-size: 2.6rem;
     line-height: 1.54;
-
+    padding-top: 38px;
     color: #FFFFFF;
 }
 
@@ -472,10 +472,13 @@ a {
     align-items: center;
     justify-content: center;
     margin-top: 32px;
-    background: #FFB900;
     height: 50px;
     padding: 0 20px;
     width: 137px;
+}
+.feature .content-block .btn-feature:hover {
+    background: #FFB900;
+
 }
 .feature-2 {
     flex-direction: row-reverse;
@@ -517,8 +520,11 @@ a {
     display: flex;
     margin-top: 55px;   
     gap: 30px;
+    overflow: hidden;
 }
 .blog-item {
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
     border-radius: 16px;
     overflow: hidden;
 }
@@ -526,7 +532,7 @@ a {
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
 }
 .blog-item .img {
-    width: 370px;
+    width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 16px 16px 0px 0px;
@@ -573,19 +579,23 @@ a {
 .blog-item .info .cta-btn:hover {
     background: #FFB900;
 }
-.blog .foot {
+.blog .dots {
     display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 6px;
     margin-top: 38px;
 }
-.blog .foot span + span{
-    margin-left: 6px;
-
-}
-.blog .foot span:hover {
-    color: #FFB900;
+.blog .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5F5B53;
     cursor: pointer;
+}
+.blog .dot.active {
+    background: #FFB900;
+    cursor: default;
 }
 
 /*============= Footer ============= */
